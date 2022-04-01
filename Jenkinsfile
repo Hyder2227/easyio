@@ -13,16 +13,19 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'npm install'
-         sh '<<Build Command>>'
+         echo 'Building the application...'
       }
     }  
-    
             
     stage('Test') {
       steps {
-        sh 'node test'
+         echo 'Testing the application....'
       }
     }
+    
+    stage('Deploy') {
+         echo 'Deploying the application...' 
+    }
   }
+ }
 }
